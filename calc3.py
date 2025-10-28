@@ -11,8 +11,10 @@ while check  == False:
     print("2. subtraction")
     print("3. multipliction")
     print("4. division")
-
-    option = input("Enter your option addition subtraction division or multiplication. Type quit to exit: ")
+    
+   try:
+        option = input("Enter your option addition subtraction division or multiplication. Type quit to exit: ")
+        
 
     if option == "addition":
         x = input("add value for x:")
@@ -43,5 +45,7 @@ while check  == False:
         m = b * c
         print(f'the product of {b} and {c} is {m}')
     elif option == "quit":
-        check = True
+        check = True    
+except:
     
+ 
