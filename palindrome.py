@@ -9,3 +9,4 @@ if word == reverse:
     print("That is a palindrome!")
 else:
     print("That is not a palindrome.")
+

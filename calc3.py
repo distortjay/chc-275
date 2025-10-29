@@ -46,6 +46,9 @@ while check  == False:
         print(f'the product of {b} and {c} is {m}')
     elif option == "quit":
         check = True    
-except:
+   except ValueError:
+       print("you must enter a number")
+   except ZeroDivisionError: 
+       print("number 2 must not bbe zero 
     
  
