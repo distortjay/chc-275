@@ -17,3 +17,13 @@ for lines in buffer:
     grades.append(line[1])
 print(names)
 print(grades)
+
+file = open ("names.txt,w")
+line = "hello world"
+file.write(line)
+file.close()
+for i in range(len(names)):
+    line = f"{names[i]},{grades[i]}/n"
+    buffer.append(line)
+    file.write(line)
+file.close()
