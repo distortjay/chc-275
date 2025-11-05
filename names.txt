@@ -1,4 +1,4 @@
-john 
-cam
-joe
-melvin 
+john, 90
+cam, 61
+joe, 85
+melvin, 79
