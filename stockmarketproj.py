@@ -1,2 +1,7 @@
-file = open "Stock Market Evaluation","r"
+file = open "buffer.txt","r"
 
+buffer.file = file.readlines()
+file.close()
+print(buffer)
+print(buffer[0])
+msft = buffer[0]
