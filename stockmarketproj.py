@@ -10,6 +10,9 @@ nvda = buffer[2].split(",")
 msft.pop(0)
 amzn.pop(0)
 nvda.pop(0)
+msft = [float(x) for x in msft]
+amzn = [float(x) for x in amzn]
+nvda = [float(x) for x in nvda]
 print(msft)
 print(amzn)
 print(nvda)
