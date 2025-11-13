@@ -10,14 +10,14 @@ nvda = buffer[2].split(",")
 msft.pop(0)
 amzn.pop(0)
 nvda.pop(0)
-msft = [float(x) for x in msft]
-amzn = [float(x) for x in amzn]
-nvda = [float(x) for x in nvda]
 print(msft)
 print(amzn)
 print(nvda)
 
-
-
+for i in range  (len(msft)):
+    msft[i]= int (msft[i])
+    amzn[i] = int (msft[i])
+    nvda[i] = int (nvda[i])
+sum msft 
 
 
