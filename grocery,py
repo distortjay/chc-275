@@ -1,0 +1,46 @@
+print("welcome to the grocery store")
+print("add to carts:")
+print("remove items:")
+print("check out:")
+print("enter your selectiion:")
+print("")
+
+file = open ("grocery.txt","r")
+
+buffer = file.readlines()
+file.close()
+print(buffer)
+print(buffer[0])
+bananas = buffer[0].split(",")
+apples = buffer[1].split(",")
+rawsteak= buffer[2].split(",")
+milk = buffer[2].split(",")
+orangejuice = buffer[2].split(",")
+eggs = buffer[2].split(",")
+rotisseriechicken = buffer[2].split(",")
+rice = buffer[2].split(",")
+loafofbread = buffer[2].split(",")
+
+bananas.pop(0)
+apples.pop(0)
+rawsteak.pop(0)
+milk.pop(0)
+orangejuice.pop(0)
+eggs.pop(0)
+rotisseriechicken.pop(0)
+rice.pop(0)
+loafofbread.pop(0)
+print(msft)
+print(amzn)
+print(nvda)
+while True:
+
+
+
+
+
+
+
+
+
+
