@@ -1,46 +1,43 @@
-print("welcome to the grocery store")
-print("add to carts:")
-print("remove items:")
-print("check out:")
-print("enter your selectiion:")
-print("")
-
-file = open ("grocery.txt","r")
-
+file = open("grocery.txt" , "r")
 buffer = file.readlines()
-file.close()
-print(buffer)
-print(buffer[0])
-bananas = buffer[0].split(",")
-apples = buffer[1].split(",")
-rawsteak= buffer[2].split(",")
-milk = buffer[2].split(",")
-orangejuice = buffer[2].split(",")
-eggs = buffer[2].split(",")
-rotisseriechicken = buffer[2].split(",")
-rice = buffer[2].split(",")
-loafofbread = buffer[2].split(",")
-
-bananas.pop(0)
-apples.pop(0)
-rawsteak.pop(0)
-milk.pop(0)
-orangejuice.pop(0)
-eggs.pop(0)
-rotisseriechicken.pop(0)
-rice.pop(0)
-loafofbread.pop(0)
-print(msft)
-print(amzn)
-print(nvda)
-while True:
-
-
-
-
-
-
-
-
-
-
+food = []
+price = []
+for line in buffer:
+   line = line.strip()
+   line = line.split(",")
+   food.append(line[0])
+   line[1] = float(line[1])
+   price.append(line[1])
+   print(food)
+   print(price)
+total = 0
+check = False
+while check == False:
+    print("Welcome To The Grocery Store")
+    print("1. add to cart")
+    print("2. remove items")
+    print("3. check out")
+    option = input('What is your selection: ')
+    try:
+        if option == 1 or option == "1":
+            purchase = input("which food you would like to purchase: ").strip()
+            purchase = int(purchase)
+            amount = input(f'Enter the amount of {food[purchase]} you would like to purchase')
+            amount = int(amount)
+            total = total + amount 
+            
+            if option == 2 or option == "2":
+            purchase = input("what item would you like to remove: ").strip()
+            purchase = int(purchase)
+            amount = input(f'Enter the amount of {food[purchase]} you would like to purchase')
+            amount = int(amount)
+            total = total + amount 
+            
+      
+    except ValueError:
+        print ("x and y must be numbers")
+    except ZeroDivisionError:
+        print ("y must be nonzero")
+    except Exception as e:
+        print(e)
+ 
