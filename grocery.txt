@@ -1,0 +1,9 @@
+bananas, 1.75
+apples, 1.50
+raw steak, 4.75
+milk, 2.50
+orange juice, 3.50
+eggs, 10.99
+rotisserie chicken, 6.50
+rice, 4.00
+loaf of bread, 2.00

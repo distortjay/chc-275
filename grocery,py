@@ -2,14 +2,14 @@ file = open("grocery.txt" , "r")
 buffer = file.readlines()
 food = []
 price = []
+cart = []
+
 for line in buffer:
    line = line.strip()
    line = line.split(",")
    food.append(line[0])
    line[1] = float(line[1])
    price.append(line[1])
-   print(food)
-   print(price)
 total = 0
 check = False
 while check == False:
@@ -20,18 +20,30 @@ while check == False:
     option = input('What is your selection: ')
     try:
         if option == 1 or option == "1":
+            print(food)
+            print(price)
             purchase = input("which food you would like to purchase: ").strip()
             purchase = int(purchase)
-            amount = input(f'Enter the amount of {food[purchase]} you would like to purchase')
+            amount = input(f'Enter the amount of {food[purchase]} you would like to purchase:')
             amount = int(amount)
-            total = total + amount 
+            for i in range(amount):
+                cart.append(food[purchase])
+            total = total + amount * price[purchase]
+           
             
             if option == 2 or option == "2":
-            purchase = input("what item would you like to remove: ").strip()
-            purchase = int(purchase)
-            amount = input(f'Enter the amount of {food[purchase]} you would like to purchase')
-            amount = int(amount)
-            total = total + amount 
+                purchase = input("what item would you like to remove: ").strip()
+                purchase = int(purchase)
+                amount = input(f'Enter the amount of {food[purchase]} you would like to purchase')
+                amount = int(amount)
+             
+                total = total + amount
+                print(total)
+                print(cart)
+            
+            
+            if option == 3 or option == "3":
+                print("your total is ")
             
       
     except ValueError:
