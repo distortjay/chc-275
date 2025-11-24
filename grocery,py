@@ -29,21 +29,31 @@ while check == False:
             for i in range(amount):
                 cart.append(food[purchase])
             total = total + amount * price[purchase]
+            print("your total is " + str(total))
+        
            
             
-            if option == 2 or option == "2":
-                purchase = input("what item would you like to remove: ").strip()
-                purchase = int(purchase)
-                amount = input(f'Enter the amount of {food[purchase]} you would like to purchase')
-                amount = int(amount)
-             
-                total = total + amount
-                print(total)
-                print(cart)
+        if option == 2 or option == "2":
+            print(cart)
+            purchase = input("which food you would like to remove: ").strip()
+            purchase = int(purchase)
+            amount = input(f'Enter the amount of {food[purchase]} you would like to remove:')
+            amount = int(amount)
+            for i in range(amount):
+                if food[purchase] in cart:
+                    cart.remove(food[purchase])
+                    total = total - price[purchase]
+            print("your total is " + str(total))
             
             
-            if option == 3 or option == "3":
-                print("your total is ")
+    
+         
+                
+        if option == 3 or option == "3":
+                print("your total is " + str(total))
+                check = True   
+                
+
             
       
     except ValueError:
