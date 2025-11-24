@@ -50,8 +50,10 @@ while check == False:
          
                 
         if option == 3 or option == "3":
-                print("your total is " + str(total))
-                check = True   
+            tax = total * 0.06
+            total = total + tax
+            print("your total is " + str(total))
+            check = True   
                 
 
             
